@@ -1,6 +1,6 @@
 ## Streamlabs Canvas Frontend Project
 
-Hi there! Thank you for your interest in joining the frontend engineering team at Streamlabs. Thank you so much for taking the time to read through and complete this project. At Streamlabs we are committed to building a talented, empathetic, and passionate team, which is made possible by your investment in this process. We are deeply grateful for your time and commitment.
+Hi there! Thank you for your interest in joining the frontend engineering team at Streamlabs. Thank you so much for taking the time to read through and complete this project. At Streamlabs we are committed to building a talented, empathetic, and passionate team, which is made possible by your investment in this process. We are deeply grateful for your time, passion, and interest.
 
 We believe it is important that our assessment of your skills matches the technical challenges you will face as an engineer at the company. For this project, you will be using the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) to build a simplified version of the editor found in the [Streamlabs Desktop App](https://streamlabs.com/streamlabs-live-streaming-software).
 
@@ -16,9 +16,9 @@ You will be building an HTML page that contains a single canvas element. On the 
 
 - The canvas should take up the maximum available space in the viewport. You should not need to scroll to see any part of the canvas, and it should be responsive to different window sizes.
 
-- You should render 2 images at any position on the canvas. You may choose any images you wish, and they can be hardcoded. There are 2 example images provided in the assets folter in this repository that you can use if you wish. Allowing the user to select images is not part of this assignment. Both of these images should be rendered on the same canvas. You can choose appropriate dimensions of the images but they should maintain proper aspect ratios of the original image sources.
+- You should render 2 images at any position on the canvas. You may choose any images you wish, and they can be hardcoded. There are 2 example images provided in the assets folder in this repository that you can use if you wish. Allowing the user to provide their own images is not part of this assignment. Both of these images should be rendered on the same canvas. You can choose appropriate dimensions of the images but they should maintain proper aspect ratios of the original image sources.
 
-- You should be able to click and **drag each image** individually around the canvas with your mouse cursor. An image cannot be dragged into a position where it is partially outside the canvas.
+- You should be able to click and **drag each image** individually around the canvas with your mouse cursor. An image should not be allowed to be dragged into a position where it is partially outside the canvas.
 
 - While the image is being dragged, add a green border of 2 pixels width around the dragged image. This border should disappear when the image is not actively being dragged.
 
