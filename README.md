@@ -1,18 +1,18 @@
 ## Streamlabs Canvas Frontend Project
 
-Hi there! Thank you for your interest in joining the frontend engineering team at Streamlabs. Thank you so much for taking the time to read through and complete this project. At Streamlabs we are committed to building a talented, empathetic, and passionate team, which is made possible by your investment in this process. We are deeply grateful for your time, passion, and interest.
+Hey! Thank you for your interest in joining the frontend engineering team at Streamlabs. Thank you so much for taking the time to read through and complete this project. At Streamlabs we are committed to building a talented, empathetic, and passionate team, which is made possible by your investment in this process. We are deeply grateful for your time, passion, and interest.
 
-We believe it is important that our assessment of your skills matches the technical challenges you will face as an engineer at the company. For this project, you will be using the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) to build a simplified version of the editor found in the [Streamlabs Desktop App](https://streamlabs.com/streamlabs-live-streaming-software).
+We believe it is important that our assessment of your skills matches the technical challenges you will face as an engineer at the company. For this project, you will be using the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) to build a very basic simplified version of the editor found in the [Streamlabs Desktop App](https://streamlabs.com/streamlabs-live-streaming-software). While your actual work for Streamlabs will vary, this assignment should illustrate the kind of challenging and outside-the-norm challenges we face as frontend engineers at Streamlabs.
 
 ## The Project
 
 You should start by familiarizing yourself with the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) if you are not already familiar.
 
-You will be building an HTML page that contains a single canvas element. On the canvas, you will render two images, which can be dragged around using the mouse.
+You will be building an HTML page that contains a single canvas element. On the canvas, you will render two images, which can be dragged around using the mouse.  Please note that these should be rendered using the canvas API, not using `<image>` elements.
 
 ### Please consider the following requirements:
 
-- The canvas should have a 16:9 aspect ratio
+- The canvas should have a locked 16:9 aspect ratio
 
 - The canvas should take up the maximum available space in the viewport. You should not need to scroll to see any part of the canvas, and it should be responsive to different window sizes.
 
@@ -27,6 +27,8 @@ You will be building an HTML page that contains a single canvas element. On the 
 - While you are welcome to use 3rd party libraries, please do not use any libraries that fully implement the rendering/dragging behavior (i.e. Fabric.js). We will be further customizing this behavior in the future, and we need the flexibility that the low-level canvas API provides.
 
 - JavaScript and TypeScript are both acceptable for this assignment, and you should choose whichever one you would prefer.
+
+- You are welcome to use React, Vue, or another framework for this project. However, it is not required, and your choice of framework (or none) will not impact how we assess your project.
 
 - While we love automated tests at Streamlabs, you are not required or encouraged to include them as part of your solution. If it helps you to write tests, you are welcome to include them, but we will not be judging them as part of your submission.
 
