@@ -25,7 +25,7 @@ The task at hand is to build a simple canvas application that allows users to dr
 
 ### Q&A
 
-##### 1. How long did it take you to complete this assignment?
+#### 1. How long did it take you to complete this assignment?
 
   - Actual coding, it probably took about 4-5 hours. 8 if I include watching the videos.
     - I was completely unfamiliar with the canvas API, so I had to do a lot of research and watch several tutorials.
@@ -35,22 +35,22 @@ The task at hand is to build a simple canvas application that allows users to dr
         - I had spent a decent amount of time on the drag/drop research and establishing the dragging bounds and wanted to wrap things up to submit by Wednesday evening.
         -  I spent some time trying to look up and learn this information by traditional means, but AI was a much more time efficient.
 
-##### 2. What about this assignment did you find most challenging?
+#### 2. What about this assignment did you find most challenging?
 
   - Figuring out what was meant by images needing to be rendered using the canvas API, not `img` tags.
     - Most of what I came across when researching how to add images to a canvas involved adding the image tag to the html file, hiding them with CSS, then using the document selector to access them in the JavaScript file.
   - Once I had the images on the canvas, it was re-familiarizing myself with vanilla js.
 
-##### 3. What about this assignment did you find unclear?
+#### 3. What about this assignment did you find unclear?
 
   - Just that bit about the images. Hoping I understood it correctly in how I implemented the image imports.
     Otherwise, I thought the project had very clear instructions.
 
-##### 4. Do you feel like this assignment has an appropriate level of difficulty?
+#### 4. Do you feel like this assignment has an appropriate level of difficulty?
 
   - Yes. If someone were familiar with canvas and working in vanilla js, this would be a fairly straightforward project.
 
-##### 5. Briefly explain the technical decisions you made in this project, i.e. architecture, code-splitting, libraries, or other decisions and tradeoffs.
+#### 5. Briefly explain the technical decisions you made in this project, i.e. architecture, code-splitting, libraries, or other decisions and tradeoffs.
 
   - I waffled between using vanilla js and starting the project with React, which is what I work in every day.
   - When I was going through the tutorials, they always started with vanilla js, so I decided to go with that for learning's sake.
