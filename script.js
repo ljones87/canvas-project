@@ -51,12 +51,14 @@ const onImage = (x, y, image) => {
 }
 
 const mouseDown = (e) => {
+   e.preventDefault()
   const { clientX, clientY } = e
+  // current event x/y coordinates
   startX = parseInt(clientX)
   startY = parseInt(clientY)
-  e.preventDefault()
   isDragging = true
   const matchingImage = images.findIndex((image) => onImage(startX, startY, image))
+
   if (matchingImage > -1) {
     activeImage = matchingImage
   }
@@ -73,18 +75,28 @@ const mouseUp = (e) => {
 
 const mouseMove = (e) => {
   e.preventDefault()
+  const rect = canvas.getBoundingClientRect()
+
   const mouseX = parseInt(e.clientX)
   const mouseY = parseInt(e.clientY)
+
   if (!isDragging) {
     return
   } else {
-    const dx = mouseX - startX
-    const dy = mouseY - startY
+    const differenceInPixelsX = mouseX - startX
+    const differenceInPixelsY = mouseY - startY
 
     const currentImage = images[activeImage]
-    currentImage.x = currentImage.x += dx
-    currentImage.y = currentImage.y += dy
+    const newX = currentImage.x = currentImage.x += differenceInPixelsX
+    const newY = currentImage.y = currentImage.y += differenceInPixelsY
+
+    // Ensure the new position is within the canvas boundaries
+    currentImage.x = Math.max(0, Math.min(newX, canvas.width - currentImage.width));
+    currentImage.y = Math.max(0, Math.min(newY, canvas.height - currentImage.height));
+
+
     drawImage()
+
     startX = mouseX
     startY = mouseY
   }
@@ -101,5 +113,6 @@ const drawImage = () => {
     ctx.drawImage(image.file, image.x, image.y, image.height, image.width)
   })
 }
+
 
 window.onload = drawImage
