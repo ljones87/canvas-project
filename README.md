@@ -1,4 +1,5 @@
 ## The Project
+[original project link](https://github.com/stream-labs/canvas-frontend-project)
 
 The task at hand is to build a simple canvas application that allows users to drag and drop images on the canvas. The following requirements should be met with my submission:
 
