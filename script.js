@@ -1,15 +1,19 @@
 
- // Get the canvas element
- const canvas = document.getElementById('myCanvas');
- const ctx = canvas.getContext('2d');
- canvas.width = window.innerWidth;
- canvas.height = window.innerHeight;
- // Example: Draw a simple rectangle
+const catImage = new Image();
+catImage.src = 'assets/cat.png';
+ 
+const canvas = document.getElementById('myCanvas') 
+const ctx = canvas.getContext('2d');
 
-const cat = document.getElementById('catImg');
+
+ canvas.width = window.innerWidth;
+ // 16:9 aspect ratio
+ canvas.height = (9*window.innerHeight)/16;
+
 
  const drawImage = () => {
-    ctx.drawImage(cat, 100, 100, 100, 100);
+    ctx.drawImage(catImage, 10, 10, 100, 100);
  }
 
- drawImage();
+window.onload = drawImage;
+
