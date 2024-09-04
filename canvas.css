@@ -1,15 +1,11 @@
-html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 canvas {
   position: relative;
-  border:1px solid red;
-  width:100vw;
-}
-
-#catImg {
-    display: none;
+  border: 1px solid black;
+  width: 100vw;
 }

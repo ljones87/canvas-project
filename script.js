@@ -1,8 +1,15 @@
 const catImage = new Image()
 catImage.src = 'assets/cat.png'
 
+const catMotion = new Image()
+catMotion.src = 'assets/cat-running.jpg'
+
 const dogImage = new Image()
 dogImage.src = 'assets/dog.png'
+
+const dogMotion = new Image()
+dogMotion.src = 'assets/dog-running.png'
+
 
 let isDragging = false
 let activeImage = null
@@ -10,16 +17,18 @@ let activeImage = null
 const images = [
   {
     file: catImage,
-    x: 0,
-    y: 10,
-    width: 100,
-    height: 100,
+    drag: catMotion,
+    x: 5,
+    y: 5,
+    width: 150,
+    height: 120,
   },
   {
     file: dogImage,
-    x: 0,
+    drag: dogMotion,
+    x: 5,
     y: 300,
-    width: 100,
+    width: 150,
     height: 100,
   },
 ]
@@ -29,7 +38,7 @@ const ctx = canvas.getContext('2d')
 
 canvas.width = window.innerWidth
 // 16:9 aspect ratio
-canvas.height = (window.innerWidth * 9) / 16
+canvas.height = (window.innerWidth * 9) /16
 
 const canvasLeft = canvas.offsetLeft
 const canvasTop = canvas.offsetTop
@@ -111,13 +120,15 @@ canvas.onmousemove = mouseMove
 const drawImage = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height)
   images.forEach((image, i) => {
-    ctx.drawImage(image.file, image.x, image.y, image.height, image.width)
     if (i === activeImage && isDragging) {
+      ctx.drawImage(image.drag, image.x, image.y, image.width, image.height)
       ctx.beginPath();
       ctx.rect(image.x, image.y, image.width, image.height);
       ctx.strokeStyle = 'green';
       ctx.lineWidth = 2;
       ctx.stroke();
+    } else {
+      ctx.drawImage(image.file, image.x, image.y, image.width, image.height)
     }
   })
 }
