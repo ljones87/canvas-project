@@ -26,8 +26,8 @@ const images = [
   {
     file: dogImage,
     drag: dogMotion,
-    x: 5,
-    y: 300,
+    x: 175,
+    y: 5,
     width: 150,
     height: 100,
   },
