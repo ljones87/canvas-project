@@ -70,12 +70,13 @@ const mouseUp = (e) => {
   } else {
     e.preventDefault()
     isDragging = false
+    activeImage = null
+    drawImage()
   }
 }
 
 const mouseMove = (e) => {
   e.preventDefault()
-  const rect = canvas.getBoundingClientRect()
 
   const mouseX = parseInt(e.clientX)
   const mouseY = parseInt(e.clientY)
@@ -109,10 +110,16 @@ canvas.onmousemove = mouseMove
 
 const drawImage = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height)
-  images.forEach((image) => {
+  images.forEach((image, i) => {
     ctx.drawImage(image.file, image.x, image.y, image.height, image.width)
+    if (i === activeImage && isDragging) {
+      ctx.beginPath();
+      ctx.rect(image.x, image.y, image.width, image.height);
+      ctx.strokeStyle = 'green';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
   })
 }
-
 
 window.onload = drawImage
