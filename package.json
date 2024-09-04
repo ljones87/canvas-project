@@ -1,5 +1,5 @@
 {
-  "name": "canvas-demo",
+  "name": "canvas-project",
   "version": "1.0.0",
   "description": "A simple canvas demo with live reloading using Yarn",
   "main": "index.html",
@@ -7,18 +7,10 @@
     "start": "http-server -c-1",
     "dev": "browser-sync start --server --files '*.html, *.css, *.js'"
   },
-  "keywords": [
-    "canvas",
-    "html5",
-    "yarn"
-  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^3.0.2",
     "http-server": "^14.1.1"
-  },
-  "dependencies": {
-    "prettier": "^3.3.3"
   }
 }

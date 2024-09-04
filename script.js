@@ -10,10 +10,6 @@ dogImage.src = 'assets/dog.png'
 const dogMotion = new Image()
 dogMotion.src = 'assets/dog-running.png'
 
-
-let isDragging = false
-let activeImage = null
-
 const images = [
   {
     file: catImage,
@@ -44,6 +40,8 @@ const canvasLeft = canvas.offsetLeft
 const canvasTop = canvas.offsetTop
 
 let startX, startY
+let isDragging = false
+let activeImage = null
 
 const getImageName = (image) => {
   const imageName = image.src.split('/').slice(-1)[0].split('.')[0]
@@ -104,18 +102,12 @@ const mouseMove = (e) => {
     currentImage.x = Math.max(0, Math.min(newX, canvas.width - currentImage.width));
     currentImage.y = Math.max(0, Math.min(newY, canvas.height - currentImage.height));
 
-
     drawImage()
 
     startX = mouseX
     startY = mouseY
   }
 }
-
-canvas.onmousedown = mouseDown
-canvas.onmouseup = mouseUp
-canvas.onmouseout = mouseUp
-canvas.onmousemove = mouseMove
 
 const drawImage = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -132,5 +124,11 @@ const drawImage = () => {
     }
   })
 }
+
+
+canvas.onmousedown = mouseDown
+canvas.onmousemove = mouseMove
+canvas.onmouseout = mouseUp
+canvas.onmouseup = mouseUp
 
 window.onload = drawImage

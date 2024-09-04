@@ -1,73 +1,69 @@
-## Streamlabs Canvas Frontend Project
-
-Hey! Thank you for your interest in joining the frontend engineering team at Streamlabs. Thank you so much for taking the time to read through and complete this project. At Streamlabs we are committed to building a talented, empathetic, and passionate team, which is made possible by your investment in this process. We are deeply grateful for your time, passion, and interest.
-
-We believe it is important that our assessment of your skills matches the technical challenges you will face as an engineer at the company. For this project, you will be using the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) to build a very basic simplified version of the editor found in the [Streamlabs Desktop App](https://streamlabs.com/streamlabs-live-streaming-software). While your actual work for Streamlabs will vary, this assignment should illustrate the kind of challenging and outside-the-norm challenges we face as frontend engineers at Streamlabs.
-
 ## The Project
 
-You should start by familiarizing yourself with the [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) if you are not already familiar.
-
-You will be building an HTML page that contains a single canvas element. On the canvas, you will render two images, which can be dragged around using the mouse.  Please note that these should be rendered using the canvas API, not using `<image>` elements.
-
-### Please consider the following requirements:
+The task at hand is to build a simple canvas application that allows users to drag and drop images on the canvas. The following requirements should be met with my submission:
 
 - The canvas should have a locked 16:9 aspect ratio
 
 - The canvas should take up the maximum available space in the viewport. You should not need to scroll to see any part of the canvas, and it should be responsive to different window sizes.
 
-- You should render 2 images at any position on the canvas. You may choose any images you wish, and they can be hardcoded. There are 2 example images provided in the assets folder in this repository that you can use if you wish. Allowing the user to provide their own images is not part of this assignment. Both of these images should be rendered on the same canvas. You can choose appropriate dimensions of the images but they should maintain proper aspect ratios of the original image sources.
+- 2 images should be rendered at any position on the canvas. Images provided in the assets folder can be swapped for different ones, and they can be hardcoded.
 
-- You should be able to click and **drag each image** individually around the canvas with your mouse cursor. An image should not be allowed to be dragged into a position where it is partially outside the canvas.
+  - Allowing the user to provide their own images is not part of this assignment.
+  - Both of these images should be rendered on the same canvas. You can choose appropriate dimensions of the images but they should maintain proper aspect ratios of the original image sources.
+
+- Each image should be click and draggable around the canvas with the mouse cursor. An image should not be allowed to be dragged into a position where it is partially outside the canvas.
 
 - While the image is being dragged, add a green border of 2 pixels width around the dragged image. This border should disappear when the image is not actively being dragged.
 
-### Technology Considerations:
+### To Run
 
-- While you are welcome to use 3rd party libraries, please do not use any libraries that fully implement the rendering/dragging behavior (i.e. Fabric.js). We will be further customizing this behavior in the future, and we need the flexibility that the low-level canvas API provides.
+- After pulling the repo, run `yarn` to install dependencies.
+- Run `yarn start` to run http-server which.
+  - Grab the link from the terminal and open it in your browser.
+- Run `yarn dev` to start the dev server via browser-sync with hot reloading.
+  - Should be accessible at `localhost:3000`
 
-- JavaScript and TypeScript are both acceptable for this assignment, and you should choose whichever one you would prefer.
+### Q&A
 
-- You are welcome to use React, Vue, or another framework for this project. However, it is not required, and your choice of framework (or none) will not impact how we assess your project.
+##### 1. How long did it take you to complete this assignment?
 
-- While we love automated tests at Streamlabs, you are not required or encouraged to include them as part of your solution. If it helps you to write tests, you are welcome to include them, but we will not be judging them as part of your submission.
+  - Actual coding, it probably took about 4-5 hours. 8 if I include watching the videos.
+    - I was completely unfamiliar with the canvas API, so I had to do a lot of research and watch several tutorials.
+    - I followed along with some of the youTube tutorials, cleaning up and customizing as needed for the project.
+    - **When I arrived at the task to add the green border, I used [claude.ai](https://claude.ai) to find the solution.**
+      - If this is a disqualifier, should the project meet your expectations otherwise, I totally understand. I made this choice for two reasons:
+        - I had spent a decent amount of time on the drag/drop research and establishing the dragging bounds and wanted to wrap things up to submit by Wednesday evening.
+        -  I spent some time trying to look up and learn this information by traditional means, but AI was a much more time efficient.
 
-## What we are looking for
+##### 2. What about this assignment did you find most challenging?
 
-While the hard requirements of this assignment are somewhat basic, we are looking for assignments that display deep understanding of JavaScript and an ability to write clean, scalable, and well commented code. The infrastructure should be easily able to potentially handle future feature requirements such as the following:
+  - Figuring out what was meant by images needing to be rendered using the canvas API, not `img` tags.
+    - Most of what I came across when researching how to add images to a canvas involved adding the image tag to the html file, hiding them with CSS, then using the document selector to access them in the JavaScript file.
+  - Once I had the images on the canvas, it was re-familiarizing myself with vanilla js.
 
-- persisting state on refresh
-- ability to add/remove images from file input and/or src
-- reordering the z positions of each layers
-- instead of drawing static images, drawing custom object (like our alerts)
-- resizing and cropping objects
-- undo/redo
+##### 3. What about this assignment did you find unclear?
 
-```
-NOTE: You do not need to build these features
-```
+  - Just that bit about the images. Hoping I understood it correctly in how I implemented the image imports.
+    Otherwise, I thought the project had very clear instructions.
 
-## Documentation & Thought Process
+##### 4. Do you feel like this assignment has an appropriate level of difficulty?
 
-**Please include a `README.md` file that includes the following information:**
+  - Yes. If someone were familiar with canvas and working in vanilla js, this would be a fairly straightforward project.
 
-- Instructions on how to run your application
+##### 5. Briefly explain the technical decisions you made in this project, i.e. architecture, code-splitting, libraries, or other decisions and tradeoffs.
 
-- Your brief answers to the following questions:
-  - How long did it take you to complete this assignment?
+  - I waffled between using vanilla js and starting the project with React, which is what I work in every day.
+  - When I was going through the tutorials, they always started with vanilla js, so I decided to go with that for learning's sake.
+  - The nature of interacting with the canvas through react would involve using a react ref hook and wrapping may of these functions within a useEffect/building a custom hook.
+  - The biggest drawback in using vanilla js is accommodating the more complex considerations:
 
-  - What about this assignment did you find most challenging?
+    - persisting state on refresh
+    - ability to add/remove images from file input and/or src
+    - reordering the z positions of each layers
+    - instead of drawing static images, drawing custom object (like our alerts)
+    - resizing and cropping objects
+    - undo/redo
 
-  - What about this assignment did you find unclear?
-
-  - Do you feel like this assignment has an appropriate level of difficulty?
-
-  - Briefly explain the technical decisions you made in this project, i.e. architecture, code-splitting, libraries, or other decisions and tradeoffs.
-
-## Questions
-
-Please email us if you have any questions along the way. We will try our best to help guide you through any confusion. Feel free to make assumptions and document them as you go as well.
-
-## Submission
-
-Please submit your completed assignment via email to the recruiter who sent it to you. You can submit your assignment as a zip file attachment, or you can push it to a GitHub repository and include a link to the respository. We want to thank you again for your time and for your interest in joing the engineering team at Streamlabs!
+  - Persisting state shouldn't be an issue using local storage.
+  - Adding/removing images should be relatively straight forward with an input tag and adding/filtering images from the array as needed. Resizing them for the canvas would add some extra work to that flow.
+  - Accommodating Drawing custom objects, resizing and cropping, and undo/redo I would prefer to have this in React, as the complexity would benefit from react abstractions and modularization.

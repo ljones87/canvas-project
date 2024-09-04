@@ -4,8 +4,12 @@ body {
   padding: 0 !important;
 }
 
+body {
+  background: #252424;
+}
+
 canvas {
   position: relative;
-  border: 1px solid black;
+  background: white;
   width: 100vw;
 }
