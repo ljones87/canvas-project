@@ -37,10 +37,13 @@ The task at hand is to build a simple canvas application that allows users to dr
         -  I spent some time trying to look up and learn this information by traditional means, but AI was a much more time efficient.
 
 #### 2. What about this assignment did you find most challenging?
-
   - Figuring out what was meant by images needing to be rendered using the canvas API, not `img` tags.
     - Most of what I came across when researching how to add images to a canvas involved adding the image tag to the html file, hiding them with CSS, then using the document selector to access them in the JavaScript file.
   - Once I had the images on the canvas, it was re-familiarizing myself with vanilla js.
+  - **Note: adding this comment post submission. I am realizing we couldn't use `image` tags, not `img` tags. Because I went the path of `new Image()`, I didn't figure out how to make the height and width dynamic with the viewport, so the images are always at their given height/width in pixles. Had I used the `img` tags, I wouldn've been able to use media queries to re-size them. Sadly, I missed this so the images loose their position as the screen is re-sized, only interactable again on refresh, and with disproportionaly sized images depending on the screen.**
+    - **I should have clarified the image note with the team before, apologies on that crucial miss!** 
+
+
 
 #### 3. What about this assignment did you find unclear?
 
